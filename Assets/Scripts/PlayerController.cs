@@ -6,10 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed; //Variable contenant la vitesse de la balle changeable dans l'éditeur Unity grâce à son accès "public".
 
-	/// <summary>
-	/// 
-	/// </summary>
-
 	[SerializeField]
 	private Text scoreText; //Variable contenant le texte du score.
 	[SerializeField]
@@ -37,10 +33,12 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Miam")) //On teste si l'objet de la collision est taggé "Miam".
+		if (other.gameObject.CompareTag("Miam")) //On teste si l'objet de la collision est taggé "Miam".
         {
 			score = score + 1; //À chaque collision, le score s'incrémente et augmente.
 			SetScoreText(); //Affichage du score au fur et mesure qu'il augmente.
+
+			//Destroy (gameObject);
         }
     }
 
