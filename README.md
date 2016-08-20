@@ -5,6 +5,6 @@ Jeu du Snake basique avec Unity3D (première approche du logiciel).
 
   + [x] Système de point.
   + [x] Réapparition de l'objet collectable aléatoirement sur le terrain.
-  + [ ] Aggrandissement du serpent à mersure qu'il mange.
-  + [ ] Collision avec les murs synonyme de mort.
+  + [ ] Agrandissement du serpent à mesure qu'il mange.
+  + [x] Collision avec les murs synonyme de mort.
   + [ ] Autres...
