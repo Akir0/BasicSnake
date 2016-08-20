@@ -18,13 +18,13 @@ public class RandomPositionMiam : MonoBehaviour
 		RandomPosition ();
 	}
 
-	void OnTriggerEnter (Collider other)
+	void OnTriggerEnter (Collider miam)
 	{
-		if (other.gameObject.CompareTag("Player"))
+		if (miam.gameObject.CompareTag("Player"))
 		{
-			other.gameObject.SetActive (false);
+			miam.gameObject.SetActive (false);
 			RandomPosition();
-			other.gameObject.SetActive (true);
+			miam.gameObject.SetActive (true);
 		}
 	}
 
