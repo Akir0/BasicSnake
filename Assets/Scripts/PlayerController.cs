@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 		if (score == 6)
 		{
 			winText.text = "You win ! :D";
+			Destroy (gameObject);
 		}
 	}
 }
