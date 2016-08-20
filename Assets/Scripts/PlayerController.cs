@@ -5,10 +5,17 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     public float speed; //Variable contenant la vitesse de la balle changeable dans l'éditeur Unity grâce à son accès "public".
-	public Text scoreText; //Variable contenant le texte du score.
-	public Text winText; //Variable contenant le texte de victoire.
 
-    private Rigidbody rB; //Variable pour accéder au "Rigidbody" de la balle. Le "Rigidbody" contient les aspects physiques d'un objet. Cela rend l'objet solide et soumis à la gravité.
+	/// <summary>
+	/// 
+	/// </summary>
+
+	[SerializeField]
+	private Text scoreText; //Variable contenant le texte du score.
+	[SerializeField]
+	private Text winText; //Variable contenant le texte de victoire.
+    
+	private Rigidbody rB; //Variable pour accéder au "Rigidbody" de la balle. Le "Rigidbody" contient les aspects physiques d'un objet. Cela rend l'objet solide et soumis à la gravité.
 	private int score; //Variable contenant le score du joueur.
 
     void Start () //Démarrage du jeu (initialisation)
@@ -32,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Miam")) //On teste si l'objet de la collision est taggé "Miam".
         {
-            other.gameObject.SetActive(false); //Si c'est le cas, on désactive l'objet. Il disparaît.
 			score = score + 1; //À chaque collision, le score s'incrémente et augmente.
 			SetScoreText(); //Affichage du score au fur et mesure qu'il augmente.
         }
@@ -44,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
 		if (score == 6)
 		{
-			winText.text = "You win !!! :D";
+			winText.text = "You win ! :D";
 		}
 	}
 }
