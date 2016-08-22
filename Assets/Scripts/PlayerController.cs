@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     public float speed; //Variable contenant la vitesse de la balle changeable dans l'éditeur Unity grâce à son accès "public".
@@ -10,25 +11,28 @@ public class PlayerController : MonoBehaviour
 	private Text scoreText; //Variable contenant le texte du score.
 	[SerializeField]
 	private Text winText; //Variable contenant le texte de victoire.
-    
-	private Rigidbody rB; //Variable pour accéder au "Rigidbody" de la balle. Le "Rigidbody" contient les aspects physiques d'un objet. Cela rend l'objet solide et soumis à la gravité.
+
+    private CharacterController player;
+
 	private int score; //Variable contenant le score du joueur.
 
     void Start () //Démarrage du jeu (initialisation)
     {
-        rB = GetComponent<Rigidbody>(); //Recherche du "Rigidbody" de la balle et stockage dans la variable "rB". Execution au démarrage du jeu pour éviter de surcharger l'ordinateur.
-		score = 0; //Au départ, le joueur n'a pas de point.
+        player = GetComponent<CharacterController>();
+
+        score = 0; //Au départ, le joueur n'a pas de point.
 		SetScoreText(); //Affichage du score au début de partie.
 		winText.text = "";
     }
      
-    void FixedUpdate()
+    void Update ()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal"); //Variable enregistrant les axes horizontaux des contrôles du clavier.
-        float moveVertical = Input.GetAxis("Vertical"); //Même chose que l'horizontal, mais pour le vertical.
+        Vector3 forward = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * speed;
+        Vector3 right = Input.GetAxis("Horizontal") * transform.TransformDirection(Vector3.right) * speed;
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical); //Variable contenant les directions (x = mouvement horizontal, y = mouvement vers le haut et z = mouvement vertical).
-        rB.AddForce(movement * speed); //Ajoute de la force à l'objet qui permettra le mouvement de l'objet en 3D.
+        player.SimpleMove(Physics.gravity);
+        player.SimpleMove(forward * Time.deltaTime);
+        player.SimpleMove(right * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)
