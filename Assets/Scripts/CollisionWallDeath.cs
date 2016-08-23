@@ -12,11 +12,14 @@ public class CollisionWallDeath : MonoBehaviour
 		gameOverText.text = "";
 	}
 
-	void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.name == "Player")
+
+    void OnControllerColliderHit(ControllerColliderHit collision)
+	//void onCollisionEnter (Collider collision)
+    {
+		if (collision.gameObject.tag == "WallDeath")
 		{
-			Destroy (col.gameObject);
+            Debug.Log("Hit !");
+            Destroy (this.gameObject);
 			gameOverText.text = "Game Over ! :(";
 		}
 	}

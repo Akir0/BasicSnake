@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour
         Vector3 forward = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * speed;
         Vector3 right = Input.GetAxis("Horizontal") * transform.TransformDirection(Vector3.right) * speed;
 
-        player.SimpleMove(Physics.gravity);
-        player.SimpleMove(forward * Time.deltaTime);
-        player.SimpleMove(right * Time.deltaTime);
+        player.Move(Physics.gravity);
+        player.Move(forward * Time.deltaTime);
+        player.Move(right * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)

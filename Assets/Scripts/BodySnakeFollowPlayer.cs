@@ -4,7 +4,7 @@ using System.Collections;
 public class BodySnakeFollowPlayer : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 50f;
+    private float _speed;
 
     [SerializeField]
     private Transform _target;
