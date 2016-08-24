@@ -22,7 +22,7 @@ public class CollisionWallDeath : MonoBehaviour
             Debug.Log("Hit !");
             this.gameObject.SetActive(false);
 
-            SceneManager.LoadScene("3. MenuRestart");
+            SceneManager.LoadScene("3. MenuRestartDie");
 		}
 	}
 }

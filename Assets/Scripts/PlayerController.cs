@@ -49,12 +49,11 @@ public class PlayerController : MonoBehaviour
 	{
 		scoreText.text = "Score : " + score.ToString ();
 
-		if (score == 6)
+		if (score == 1)
 		{
-			winText.text = "You win ! :D";
             player.gameObject.SetActive(false);
 
-            SceneManager.LoadScene("1. MenuStart");
+            SceneManager.LoadScene("4. MenuRestartWin");
 		}
 	}
 }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class MenuRestartGame : MonoBehaviour
+public class MenuRestartGameWin : MonoBehaviour
 {
     public void RestartGame()
     {
