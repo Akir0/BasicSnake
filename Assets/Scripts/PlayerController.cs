@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 [RequireComponent(typeof(CharacterController))]
@@ -41,8 +42,6 @@ public class PlayerController : MonoBehaviour
         {
 			score = score + 1; //À chaque collision, le score s'incrémente et augmente.
 			SetScoreText(); //Affichage du score au fur et mesure qu'il augmente.
-
-			//Destroy (gameObject);
         }
     }
 
@@ -53,7 +52,9 @@ public class PlayerController : MonoBehaviour
 		if (score == 6)
 		{
 			winText.text = "You win ! :D";
-			Destroy (gameObject);
+            player.gameObject.SetActive(false);
+
+            SceneManager.LoadScene("1. MenuStart");
 		}
 	}
 }

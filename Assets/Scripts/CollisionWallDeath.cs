@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class CollisionWallDeath : MonoBehaviour
@@ -19,8 +20,9 @@ public class CollisionWallDeath : MonoBehaviour
 		if (collision.gameObject.tag == "WallDeath")
 		{
             Debug.Log("Hit !");
-            Destroy (this.gameObject);
-			gameOverText.text = "Game Over ! :(";
+            this.gameObject.SetActive(false);
+
+            SceneManager.LoadScene("3. MenuRestart");
 		}
 	}
 }

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("MainSceneSnakeGame");
+        SceneManager.LoadScene("2. MainSceneSnakeGame");
     }
 
     public void HighScore()
