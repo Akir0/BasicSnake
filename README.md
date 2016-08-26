@@ -7,6 +7,8 @@ Jeu du Snake basique avec Unity3D (première approche du logiciel).
   + [x] Réapparition de l'objet collectable aléatoirement sur le terrain.
   + [ ] Agrandissement du serpent à mesure qu'il mange.
   + [x] Collision avec les murs synonyme de mort.
-  + [ ] Menu principal
-  + [ ] Système de restart
-  + [ ] Tableau des scores
+  + [x] Menu principal.
+  + [x] Système de restart.
+  + [ ] Tableau des scores.
+  + [ ] Fonction pour quitter le jeu.
+  + [ ] Texture à peaufiner.
