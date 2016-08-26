@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 		{
             player.gameObject.SetActive(false);
 
-            SceneManager.LoadScene("4. MenuRestartWin");
+            SceneManager.LoadScene("4. MenuRestartGameWin");
 		}
 	}
 }

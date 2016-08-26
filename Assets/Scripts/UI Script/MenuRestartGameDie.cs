@@ -10,6 +10,11 @@ public class MenuRestartGameDie : MonoBehaviour
         SceneManager.LoadScene("2. MainSceneSnakeGame");
     }
 
+    public void AccessMainMenu()
+    {
+        SceneManager.LoadScene("1. MenuStart");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
