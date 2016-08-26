@@ -3,17 +3,17 @@ using System.Collections;
 
 public class TestFollowingObjectBodySnake : MonoBehaviour
 {
-    Transform player;
+    public GameObject player; //Variable de référence pour la boule (le joueur).
+    private Vector3 offset; //Variable différenciant le player de la caméra.
 
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
-        player = GameObject.Find("Player").transform;
+        offset = transform.position - player.transform.position;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    void LateUpdate()
     {
-        transform.position = new Vector3(player.position.x, transform.position.y, transform.position.z);
+        transform.position = player.transform.position + offset;
     }
+    //"LateUpdate" est utilisé pour que tous les objets soient chargés avant la caméra. Comme ça, nous sommes sûr que la position du joueur est à jour pour ensuitre placer la caméra dessus.
 }

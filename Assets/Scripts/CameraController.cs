@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
     public GameObject player; //Variable de référence pour la boule (le joueur).
     private Vector3 offset; //Variable différenciant le player de la caméra.
