@@ -10,5 +10,5 @@ Jeu du Snake basique avec Unity3D (première approche du logiciel).
   + [x] Menu principal.
   + [x] Système de restart.
   + [ ] Tableau des scores.
-  + [ ] Fonction pour quitter le jeu.
+  + [x] Fonction pour quitter le jeu.
   + [ ] Texture à peaufiner.
