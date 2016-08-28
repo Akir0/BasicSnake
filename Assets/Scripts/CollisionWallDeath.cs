@@ -15,7 +15,6 @@ public class CollisionWallDeath : MonoBehaviour
 
 
     void OnControllerColliderHit(ControllerColliderHit collision)
-	//void onCollisionEnter (Collider collision)
     {
 		if (collision.gameObject.tag == "WallDeath")
 		{

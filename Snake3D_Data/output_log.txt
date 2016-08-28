@@ -2,27 +2,75 @@ Initialize engine version: 5.4.0f3 (a6d8d714de6f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 750 Ti (ID=0x1380)
+    Renderer: NVIDIA GeForce GT 630M (ID=0xde9)
     Vendor:   NVIDIA
-    VRAM:     2016 MB
+    VRAM:     978 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.041 seconds
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: I:\C#\Unity\Projects\BasicSnakeUnity3D\Snake3D_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.075 seconds
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\C#\Unity\Projects\BasicSnake\snake3D_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.805855 ms
+UnloadTime: 1.088724 ms
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 24d4 -> priority: 1 
+  Thread -> id: 213c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.034117 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.293939 ms (FindLiveObjects: 0.051726 ms CreateObjectMapping: 0.011905 ms MarkObjects: 0.185559 ms  DeleteObjects: 0.044337 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.966387 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 212.
+Total: 0.573510 ms (FindLiveObjects: 0.028737 ms CreateObjectMapping: 0.016010 ms MarkObjects: 0.316928 ms  DeleteObjects: 0.210191 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.493046 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.261917 ms (FindLiveObjects: 0.055421 ms CreateObjectMapping: 0.011084 ms MarkObjects: 0.183506 ms  DeleteObjects: 0.010673 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.863344 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 212.
+Total: 0.570636 ms (FindLiveObjects: 0.026273 ms CreateObjectMapping: 0.017242 ms MarkObjects: 0.320623 ms  DeleteObjects: 0.205675 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.772617 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 223.
+Total: 0.185969 ms (FindLiveObjects: 0.013958 ms CreateObjectMapping: 0.009442 ms MarkObjects: 0.158053 ms  DeleteObjects: 0.004105 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.548057 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 262.
+Total: 0.274644 ms (FindLiveObjects: 0.043105 ms CreateObjectMapping: 0.009031 ms MarkObjects: 0.173654 ms  DeleteObjects: 0.048031 ms)
+
+Hit !
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.924102 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 212.
+Total: 0.641247 ms (FindLiveObjects: 0.036947 ms CreateObjectMapping: 0.021347 ms MarkObjects: 0.359213 ms  DeleteObjects: 0.222096 ms)
+

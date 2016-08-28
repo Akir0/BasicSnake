@@ -7,7 +7,7 @@ public class PopBodySnake : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-	    gameInstantiate(Prefabs.Load)
+	    
 	}
 	
 	// Update is called once per frame
