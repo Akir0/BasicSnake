@@ -8,9 +8,8 @@ Jeu du Snake basique avec Unity3D (première approche du logiciel).
   + [x] Collision avec les murs synonyme de mort.
   + [x] Menu principal.
   + [x] Système de restart.
-  + [ ] Tableau des scores.
   + [x] Fonction pour quitter le jeu.
   + [x] Texture à peaufiner.
-  + [ ] Obstacles qui apparaîssent aléatoirement.
+  + [ ] Tableau des scores.
   + [ ] Finition du gameplay de base.
   + [ ] Nettoyage du code et du projet.
