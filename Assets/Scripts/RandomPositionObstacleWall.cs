@@ -4,7 +4,7 @@ using System.Collections;
 public class RandomPositionObstacleWall : MonoBehaviour
 {
     /// <summary>
-    /// Position de l'obstacle au départ, puis postion aléatoire à chaque fois qu'il pop.
+    /// Position du collectable aléatoire au départ, puis à chaque fois que le joueur le collecte.
     /// </summary>
 
     private float posX;
@@ -18,17 +18,6 @@ public class RandomPositionObstacleWall : MonoBehaviour
         RandomPosition();
     }
 
-    void OnTriggerEnter(Collider player)
-    {
-        if (player.gameObject.CompareTag("MiamSnake"))
-        {
-            player.gameObject.SetActive(true);
-            RandomPosition();
-            player.gameObject.SetActive(true);
-
-        }
-    }
-
     void RandomPosition()
     {
         posX = Random.Range(-35, 40);
@@ -38,5 +27,13 @@ public class RandomPositionObstacleWall : MonoBehaviour
         posFinal = new Vector3(posX, posY, posZ);
 
         transform.position = posFinal;
+    }
+
+    void OnTriggerEnter(Collider wall)
+    {
+        if (wall.gameObject.CompareTag("Miam") && wall.gameObject.CompareTag("obstacleWall"))
+        {
+            RandomPosition();
+        }
     }
 }

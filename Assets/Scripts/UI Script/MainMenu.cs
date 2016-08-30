@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    private Object _mainScene;
+
     public void StartGame()
-    {
-        SceneManager.LoadScene("2. MainSceneSnakeGame");
+    { 
+        SceneManager.LoadScene(_mainScene.name);
     }
 
     public void HighScore()
@@ -18,5 +21,10 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
 
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
