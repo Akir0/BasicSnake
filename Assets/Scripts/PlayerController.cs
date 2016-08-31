@@ -6,56 +6,64 @@ using System.Collections;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    private float _speed = 17; //Variable contenant la vitesse de la balle changeable dans l'éditeur Unity grâce à son accès "public".
+    public float rotateSpeed;
+
+    private float speed = 15; //Variable contenant la vitesse de la balle changeable dans l'éditeur Unity grâce à son accès "public".
 
     [SerializeField]
-    private Text _scoreText; //Variable contenant le texte du score.
+    private Text scoreText; //Variable contenant le texte du score.
+    [SerializeField]
+    private Text winText; //Variable contenant le texte de victoire.
 
-    private CharacterController _player;
+    private CharacterController player;
+    private int score; //Variable contenant le score du joueur.
 
-    private int _score; //Variable contenant le score du joueur.
+    public GameObject obstacleWallPrefab;
 
     public void Start() //Démarrage du jeu (initialisation)
     {
 
-        _player = GetComponent<CharacterController>();
+        player = GetComponent<CharacterController>();
 
-        _score = 0; //Au départ, le joueur n'a pas de point.
+        score = 0; //Au départ, le joueur n'a pas de point.
         SetScoreText(); //Affichage du score au début de partie.
+        winText.text = "";
     }
 
     public void Update()
     {
         //transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
 
-        Vector3 forward = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * _speed;
-        Vector3 right = Input.GetAxis("Horizontal") * transform.TransformDirection(Vector3.right) * _speed;
+        Vector3 forward = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * speed;
+        Vector3 right = Input.GetAxis("Horizontal") * transform.TransformDirection(Vector3.right) * speed;
 
-        _player.Move(Physics.gravity);
-        _player.Move(forward * Time.deltaTime);
-        _player.Move(right * Time.deltaTime);
+        player.Move(Physics.gravity);
+        player.Move(forward * Time.deltaTime);
+        player.Move(right * Time.deltaTime);
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Miam")) //On teste si l'objet de la collision est taggé "Miam".
         {
-            _score = _score + 1; //À chaque collision, le score s'incrémente et augmente.
+            score = score + 1; //À chaque collision, le score s'incrémente et augmente.
             SetScoreText(); //Affichage du score au fur et mesure qu'il augmente.
             Gameplay();
+
+            Instantiate(obstacleWallPrefab);
         }
     }
 
     public void SetScoreText() //Fonction d'affichage du score.
     {
-        _scoreText.text = "Score : " + _score.ToString();
+        scoreText.text = "Score : " + score.ToString();
     }
 
     private void Gameplay()
     {
-        if (_score % 5 == 0)
+        if (score % 5 == 0)
         {
-            _speed = _speed * 2;
+            speed = speed * 2;
         }
-    }
+    } 
 }
