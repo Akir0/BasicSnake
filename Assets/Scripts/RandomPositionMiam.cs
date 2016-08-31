@@ -25,7 +25,6 @@ public class RandomPositionMiam : MonoBehaviour
 			miam.gameObject.SetActive (false);
 			RandomPosition();
 			miam.gameObject.SetActive (true);
-
 		}
 	}
 
