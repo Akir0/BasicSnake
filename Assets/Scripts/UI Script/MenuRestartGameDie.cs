@@ -13,12 +13,12 @@ public class MenuRestartGameDie : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(_mainScene.name);
+        SceneManager.LoadScene("2. MainSceneSnakeGame");
     }
 
     public void AccessMainMenu()
     {
-        SceneManager.LoadScene(_menuStart.name);
+        SceneManager.LoadScene("1. MenuStart");
     }
 
     public void QuitGame()

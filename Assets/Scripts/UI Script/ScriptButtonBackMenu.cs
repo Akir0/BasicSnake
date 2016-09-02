@@ -10,6 +10,6 @@ public class ScriptButtonBackMenu : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene(_mainMenu.name);
+        SceneManager.LoadScene("1. MenuStart");
     }
 }

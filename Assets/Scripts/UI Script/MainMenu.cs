@@ -13,12 +13,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     { 
-        SceneManager.LoadScene(_mainScene.name);
+        SceneManager.LoadScene("2. MainSceneSnakeGame");
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene(_creditScene.name);
+        SceneManager.LoadScene("4. Credits");
     }
 
     public void QuitGame()
